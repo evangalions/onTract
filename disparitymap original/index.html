@@ -1,0 +1,224 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Disparity Map - The Chicago Reporter</title>
+		<!-- Framework CSS -->
+		<link rel="stylesheet" href="css/screen.css" type="text/css" media="screen, projection">
+		<link rel="stylesheet" href="css/print.css" type="text/css" media="print">
+		<!--[if lt IE 8]><link rel="stylesheet" href="css/ie.css" type="text/css" media="screen, projection"><![endif]-->
+		<!-- Leaflet CSS --> 
+		<link rel="stylesheet" href="leaflet/leaflet.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="leaflet/leaflet.ie.css" /><![endif]-->
+		<link rel="stylesheet" href="css/reporter_main.css" type="text/css" media="screen">
+		<link rel="stylesheet" href="css/map.css" type="text/css" media="screen">
+		<!-- only for development -->
+		<!-- 
+		<script type="text/javascript" src="js/jsTrace.js"></script>
+		<script type="text/javascript" src="js/dom-drag.js"></script>
+		-->
+		<!-- jQuery Library -->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+		<!-- Leaflet JavaScript -->
+		<script src="leaflet/leaflet.js"></script>
+		<!-- Reporter Map JS -->
+		<script type="text/javascript" src="js/map.js"></script>
+
+        <link rel="stylesheet" href="css/smoothness/jquery-ui-1.8.20.custom.css" type="text/css">
+        <script src="js/jquery-1.7.2.min.js"></script>
+        <script src="js/jquery-ui-1.8.20.custom.min.js"></script>
+
+        <style>
+            #slider { position:relative; width:90%; top:10px; left:5%; }
+        </style>
+		
+		<script type="text/javascript">
+
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-27443321-1']);
+		  _gaq.push(['_setDomainName', 'medill.co']);
+		  _gaq.push(['_trackPageview']);
+
+		  (function() {
+		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+
+		</script>
+		
+	</head>
+	
+	<body>
+        <div id="slider"><div class="ui-slider-handle"></div></div>
+		<div class="container">
+			
+			<div id="header" class="span-24 last prepend-top">
+				
+				
+			</div>
+			<div id="page">
+				
+				<div id="mapapp">
+					
+					<div class="map-header">
+						
+						<div>
+							<div class="col700">
+								<h1 >Disparity Map</h1>
+								<p>
+									This map divides Chicago into 77 "community areas," a system used since the 1920s to analyze and understand the city's neighborhoods. These urban communities reflect the city’s differences in race, housing, income and education.
+								</p>
+							</div>
+
+							<div class="col300-last">
+								<div class="about">
+									You can select a <em style="color:#c43c35">disparity filter </em> and see how your community stacks up. As you select the criteria the most disadvantaged community areas will darken. Selecting additional filters will combine results.
+								</div>
+
+							</div>
+							<div class="clear"></div>
+
+						</div>
+						
+						<div class="col2">
+							
+						</div>
+						<div class="clear"></div>
+					</div>
+					
+
+					
+					<div class="map-container">
+						<!-- 
+						<div id="key" >
+							<ul>
+								<li><span class="label blue">black</span></li>
+								<li><span class="label green">asian</span></li>
+								<li><span class="label pink">white</span></li>
+								<li><span class="label orange">hispanic</span></li>
+								<li><span class="label grey">no majority</span></li>
+							</ul>
+						</div>
+						-->
+						<div id="map"></div>
+						
+					</div>
+
+					<div class="ui-container">
+						<div id="map-ui">
+							<div class="input">
+								<ul class="inputs-list">
+									<!-- This is based on the column data from the fusion tables-->
+									<!-- ADD NEW STUFF -->
+									<li>
+										<div class="input-checkbox">
+											<label>
+												<input type="checkbox" name="optionsCheckboxes" class="default-check" value="people_in_poverty">
+												<span>People in Poverty</span>
+											</label>
+										</div>
+									</li>
+									<!-- ADD NEW STUFF -->
+									<li>
+										<div class="input-checkbox">
+											<label>
+												<input type="checkbox" name="optionsCheckboxes" value="vacant_housing">
+												<span>Vacant Housing</span>
+											</label>
+										</div>
+									</li>
+									<li>
+										<div class="input-checkbox">
+											<label>
+												<input type="checkbox" name="optionsCheckboxes" value="households_receiving_food_stamps">
+												<span>Households Receiving Food Stamps</span>
+											</label>
+										</div>
+									</li>
+									<!--
+									<li>
+										<div class="input-checkbox">
+											<label>
+												<input type="checkbox" name="optionsCheckboxes" value="per_capita_income">
+												<span>Average Income per Person</span>
+											</label>
+										</div>
+									</li>
+									-->
+									<li>
+										<div class="input-checkbox">
+											<label>
+												<input type="checkbox" name="optionsCheckboxes" value="renter-occupied_housing">
+												<span>Renter-Occupied Housing</span>
+											</label>
+										</div>
+									</li>
+									<li>
+										<div class="input-checkbox">
+											<label>
+												<input type="checkbox" name="optionsCheckboxes" value="high_school_education_or_less">
+												<span>High School Education or Less</span>
+											</label>
+										</div>
+									</li>
+								</ul>
+								<div class="map-section-break"></div>
+								<!--
+								<ul class="inputs-list">
+									<li>
+										<div class="input-checkbox grey">
+											<label>
+												<input type="checkbox" name="optionsCheckboxes" value="reveal_by_race" class="reveal_by_race">
+												<span>Reveal by Race</span>
+											</label>
+										</div>
+									</li>
+								</ul>
+								-->
+								<span class="help-block">
+									<strong>Note:</strong> Ranked by filters above from most disadvantaged to least
+								</span>
+								<div class="map-ui-section btn-section">
+									<button id="all-boxes" class="btn">Select All</button>
+									<button id="clear-boxes" class="btn">Clear</button>
+								</div>
+
+							</div>
+							
+						</div>
+						<div id="top-results"></div>
+						
+					</div>
+					<div id="map-results">
+						<h3>Community Rank</h3>
+						<ol>
+							<li><a href="#" class="com_link" title="46">Burnside</a></li>
+						</ol>
+					</div>
+					
+				</div>
+				
+			</div>
+
+
+				
+			</div>
+		
+		</div>
+
+        <script>
+
+            $("#slider").slider({
+                value: 50,
+                slide: function(e, ui) {
+                    geojsonLayer1.setOpacity(ui.value / 100);
+                }
+            });
+        </script>
+		
+	</body>
+
+</html>

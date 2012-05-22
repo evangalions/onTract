@@ -1,0 +1,419 @@
+
+
+body {
+	font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+	/*font-size: 15px;*/
+}
+
+hr {
+	margin: 5px;
+}
+p {
+	font-family:georgia,"times new roman",times,serif;
+	color:#333;
+}
+
+/* -----------------------------------------------------------------------
+PAGE BLOCKS HOMEPAGE
+----------------------------------------------------------------------- */
+/* COLUMN 1*/
+#column1 {
+	font-size: 13px;
+}
+/* COLUMN 2*/
+#column2 {
+	/*background-color: #F0F4F5;*/
+}
+/* COLUMN 3*/
+#column3 {
+	/*background-color: #F0F4F5;*/
+	margin-left:-25px;
+	width:175px;
+}
+
+/* BLOCK*/
+/*
+	REFERENCE
+	http://colorschemedesigner.com/#3n31T2z--w0w0
+*/
+.block-blue {
+	padding:15px;
+	background-color: #F0F4F5;
+}
+.block-grey {
+	padding:15px;
+	background-color: #F4F4F4;
+}
+.block-yellow {
+	padding:15px;
+	background-color: #FAF9DC;
+}
+.block-red {
+	padding:15px;
+	background-color: #FFF5EB;
+}
+.block-teal {
+	padding:15px;
+	background-color: #D2E0E3;
+}
+.block-white {
+	padding:15px;
+	background-color: #FFF;
+}
+.block-social {
+	padding:15px;
+	/*background-color:#F2F4F8;*/
+	background-color: #F0F4F5;
+	border: 1px solid #DDD;
+	border-left:0px;
+}
+/*	MAIN STORY */
+#main_story h1 {
+	margin-bottom: 5px;
+}
+#main_story h6 {
+	margin-bottom: 10px;
+}
+
+
+/* STORY TEASE*/
+
+div.story-tease {
+	
+	margin-right:5px;
+}
+div.story-tease h4{
+	/*
+	width:110px;
+	float:right;
+	*/
+	margin-bottom: 2px;
+}
+div.story-tease p {
+	padding-top:5px;
+	padding-right:5px;
+	
+}
+div.story-tease img{
+	width:70px;
+	float:left;
+	margin-right:10px;
+}
+
+/* BLOG TEASE */
+#blog-tease ul {
+	display: block;
+	list-style-type: none;
+	-webkit-margin-before: 0px;
+	-webkit-margin-after: 0px;
+	-webkit-margin-start: 0px;
+	-webkit-margin-end: 0px;
+	-webkit-padding-start: 0px;
+}
+#blog-tease li {
+	padding:0px;
+	margin:0px;
+	list-style: none;
+	display:block;
+}
+
+#blog-tease div.story-tease {
+
+}
+
+/* TOPIC SECTION */
+
+.topic-section div.story-tease {
+	width:190px;
+	float:left;
+}
+.topic-section {
+	margin-top:1.5em;
+	width:390px;
+}
+
+/* ELSEWHERE  */
+
+.elsewhere {
+	text-align:right;
+	float:left;
+	width:380px;
+	/*border: 1px solid #CCC;*/
+	background-color: #F0F4F5;
+	padding:10px;
+	margin-right:10px;
+	margin-bottom:10px;
+}
+.elsewhere h4 {
+	margin-bottom: 0px;
+}
+.elsewhere span {
+	color:#333;
+	font-size: 11px;
+	font-weight: normal;
+	font-variant: small-caps;
+	text-transform: uppercase;
+}
+.elsewhere h4 span {
+	font-size: 11px;
+	font-weight: normal;
+	font-style: italic;
+	color:#999;
+}
+
+
+
+
+/* -----------------------------------------------------------------------
+PAGE BLOCKS
+----------------------------------------------------------------------- */
+
+/* -----------------------------------------------------------------------
+LINK STYLES
+----------------------------------------------------------------------- */
+
+a, a:visited  {
+	text-decoration: none;
+	color: #880000; 
+}
+
+a:hover {
+	text-decoration: underline;
+	color: #880000; 
+}
+
+h1 a, h2 a, h3 a, h1 a:visited, h2 a:visited, h3 a:visited {
+	text-decoration: none;
+	color: #333; 
+}
+/* -----------------------------------------------------------------------
+BUTTON STYLES
+----------------------------------------------------------------------- */
+a.button {
+	font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+	padding: 5px 10px;
+	display: inline;
+	background-color: #2c6da0; 
+	border: none;
+	color: #fff;
+	cursor: pointer;
+	font-weight: normal;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	text-shadow: 1px 1px #666;
+}
+a.button:hover {
+	background-position: 0 -48px;
+}
+a.button:active {
+	background-position: 0 top;
+	position: relative;
+	top: 1px;
+	padding: 6px 10px 4px;
+}
+
+a.button.large { font-size: 125%; padding: 7px 12px; }
+a.button.large:hover { background-position: 0 -35px; }
+a.button.large:active { padding: 8px 12px 6px; background-position: 0 top; }
+
+/* -----------------------------------------------------------------------
+FOOTER
+----------------------------------------------------------------------- */
+.footer_icon {
+	padding-top: 15px;
+}
+
+.footer_text {
+	font-size: 14px;
+}
+
+/* -----------------------------------------------------------------------
+PHOTO, CAPTION AND CREDITS
+----------------------------------------------------------------------- */
+.photo {
+	margin-bottom:15px;
+}
+.credit, .caption, .credit p, .caption p {
+	font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color:#666;
+	margin:0px;
+}
+
+.credit, .credit p{
+	font-size: 9px;
+	color:#909090;
+	text-align: right;
+	margin-top:-5px;
+	margin-bottom:2px;
+}
+
+.byline, .dateline, .byline a, .dateline a {
+	font-size: 10px;
+	line-height: 1.2em;
+	margin-top:0px;
+	margin-bottom:5px;
+	color:#999;
+	font-weight: normal;
+}
+
+.byline a, .dateline a {
+	color:#666;
+}
+.timestamp {
+	color:#CCC;
+	margin-left:5px;
+}
+
+
+
+/* -----------------------------------------------------------------------
+UNIVERSAL
+----------------------------------------------------------------------- */
+span.readmore {
+	display:block;
+}
+
+li.navigation {
+	font-size: 14px;
+	margin-bottom: 5px;
+	margin-left: 0;
+	display:inline;
+	list-style:none;
+	list-style-type:table;
+	font-size: 18px;
+	margin-right: 60px;
+	
+}
+
+img.icon {
+	margin: 5px;
+	margin-bottom: 0px;
+	margin-top: 7px;
+}
+
+img.event_icon {
+	margin-top: 0px;
+}
+
+
+.center {
+	text-align: center;
+}
+
+.half-transparent {
+	opacity: 0.5;
+	-moz-opacity: 0.5;
+	filter:alpha(opacity=50);
+}
+
+.quarter-transparent {
+	opacity: 0.25;
+	-moz-opacity: 0.25;
+	filter:alpha(opacity=25);
+}
+
+.thumb {
+	float: left;
+	margin: 2px;
+}
+
+.blurb {
+	margin-bottom: 5px;
+}
+
+.inline {
+	display: inline;
+	margin-right: 2px;
+}
+
+.float-right {
+	float: right;
+	clear: left;
+}
+
+.float-left {
+	float: left;
+	clear: right;
+}
+
+
+
+.logo_image {
+	padding-left: 10px;
+	
+}
+
+/* -----------------------------------------------------------------------
+TWITTER WIDGET
+----------------------------------------------------------------------- */
+#twitter {
+	font-size: 12px;
+	/*font-family:georgia,"times new roman",times,serif;*/
+	color:#333;
+}
+.twitted {
+	
+}
+
+.twitted h2 {
+	
+}
+
+.twitted p.preLoader {
+	margin: 0;
+	padding: 1em 1em 1em 3em;
+	background: transparent url("gfx/loader.gif") 1em center no-repeat;
+	/* generate your own loader gif: http://www.ajaxload.info */
+}
+
+.twitted ul#twitter_update_list {
+	margin: 0;
+	padding: 0 0.8em;
+	list-style-type: none;
+}
+
+.twitted ul#twitter_update_list li {
+	margin: 0;
+	padding: 0.8em 0 1em 0;
+	border-bottom: 1px solid #ccc;
+}
+
+.twitted ul#twitter_update_list li span {
+	/* tweet content */
+	display: block;
+}
+
+.twitted ul#twitter_update_list li span a {
+	/* links in tweet content */
+	color:#800;
+	font-variant: normal;
+	font-style: normal;
+}
+
+.twitted ul#twitter_update_list li a {
+	/* timestamp link */
+	color: #999;
+	/*font-variant: small-caps;*/
+	font-style: italic;
+}
+
+.twitted ul#twitter_update_list li.firstTweet {
+}
+
+.twitted ul#twitter_update_list li.lastTweet {
+	border-bottom: none;
+}
+
+.twitted p.profileLink {
+	display: block;
+	margin: 0;
+	padding: 0.3em 1em;
+	color: #fff;
+	background-color: #ddd;
+}
+
+
+
+
